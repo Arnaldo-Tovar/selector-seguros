@@ -2,7 +2,7 @@
   "name": "selector-seguros",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://selectorvida.github.io/selector-seguros",
+  "homepage": "https://arnaldo-tovar.github.io/selector-seguros",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

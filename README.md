@@ -20,7 +20,7 @@ Aplicación web para ayudar a los usuarios a seleccionar el tipo de seguro de vi
 
 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/selectorvida/selector-seguros.git
+git clone https://github.com/Arnaldo-Tovar/selector-seguros.git
 ```
 
 2. Instalar dependencias:
