@@ -1,0 +1,47 @@
+import React, { useState } from 'react';
+import { SeguroProvider } from './context/SeguroContext';
+import FormularioSeguro from './components/FormularioSeguro';
+import ResultadoSeguro from './components/ResultadoSeguro';
+
+function App() {
+  const [mostrarResultado, setMostrarResultado] = useState(false);
+  const [resultado, setResultado] = useState(null);
+
+  const manejarEnvioFormulario = (datos) => {
+    setResultado(datos);
+    setMostrarResultado(true);
+  };
+
+  const manejarNuevaConsulta = () => {
+    setMostrarResultado(false);
+    setResultado(null);
+  };
+
+  return (
+    <SeguroProvider>
+      <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl font-bold text-center text-blue-800 mb-8">
+            Selector de Seguros de Vida
+          </h1>
+          
+          {!mostrarResultado ? (
+            <FormularioSeguro onSubmit={manejarEnvioFormulario} />
+          ) : (
+            <div>
+              <ResultadoSeguro resultado={resultado} />
+              <button
+                onClick={manejarNuevaConsulta}
+                className="mt-4 w-full sm:w-auto px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              >
+                Realizar Nueva Consulta
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </SeguroProvider>
+  );
+}
+
+export default App; 
