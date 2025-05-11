@@ -40,6 +40,9 @@ function App() {
           )}
         </div>
       </div>
+      <footer className="py-4 bg-gray-50 text-center text-gray-500 text-sm">
+        <span className="font-bold">Arnaldo Tovar</span> Ceo Next Level
+      </footer>
     </SeguroProvider>
   );
 }
